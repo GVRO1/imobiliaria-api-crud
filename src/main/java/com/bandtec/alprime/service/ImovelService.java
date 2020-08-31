@@ -72,6 +72,14 @@ public class ImovelService {
         }
     }
 
+    public Imovel venderImovel(Cliente cliente, Integer id) {
+        if (cliente == null) {
+            return null;
+        } else {
+            return cliente.getListaImoveis().remove(id - 1);
+        }
+    }
+
     public List<Imovel> todosImoveis(Cliente cliente) {
         if (cliente == null) {
             return new ArrayList<>();

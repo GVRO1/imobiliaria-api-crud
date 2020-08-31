@@ -53,6 +53,10 @@ public class ImovelController {
     public Imovel verImovel(@PathVariable Integer id) {
         return imovelService.verImovel(loginController.getClienteLogado(), id);
     }
+    @DeleteMapping("/imovel/{id}")
+    public Imovel venderImovel(@PathVariable Integer id) {
+        return imovelService.venderImovel(loginController.getClienteLogado(), id);
+    }
 
     @GetMapping("/casas")
     public List<Imovel> verImoveis() {
